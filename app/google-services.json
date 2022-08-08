@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "964876894166",
+    "project_id": "stargarage-bdbfb",
+    "storage_bucket": "stargarage-bdbfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:964876894166:android:5d455081bb32361856ee77",
+        "android_client_info": {
+          "package_name": "com.example.stargarage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "964876894166-a7mv9rf98voso9i9peo9is42676kd6fa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvH4jHRNacYMkDxJXmktexr6Jf58jjlh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "964876894166-a7mv9rf98voso9i9peo9is42676kd6fa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

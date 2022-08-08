@@ -1,3 +1,8 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">StarGarage</string>
+    <string name="balance">Balance</string>
+    <string name="booking">Booking</string>
+    <string name="_123rs">123rs</string>
+    <string name="debasis_baraj">Debasis Baraj</string>
+    <string name="signout">Signout</string>
 </resources>

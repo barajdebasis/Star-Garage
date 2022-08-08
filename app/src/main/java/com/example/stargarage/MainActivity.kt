@@ -24,7 +24,8 @@ class MainActivity : AppCompatActivity() {
 
                 val i = Intent(this, Login::class.java)
                 startActivity(i)
-                finish()
+                finish()//if dont want that user can  do back form here
+
 
             }
         }, 6000); // Millisecond 1000 = 1 sec
