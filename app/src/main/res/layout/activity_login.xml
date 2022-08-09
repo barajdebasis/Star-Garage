@@ -54,6 +54,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/username"
+                android:hint="Username"
+                android:textColorHint="@color/black"
 
                 android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -65,11 +67,14 @@
             app:hintTextColor="@color/black"
             android:hint="Password"
             app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/black"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:textColor="@color/black"
                 android:id="@+id/password"
+                android:hint="Password"
+                android:textColorHint="@color/black"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"/>
         </com.google.android.material.textfield.TextInputLayout>

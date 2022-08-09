@@ -1,11 +1,15 @@
 package com.example.stargarage
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.core.view.isEmpty
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login.*
 
 class Login : AppCompatActivity() {
@@ -28,30 +32,33 @@ class Login : AppCompatActivity() {
     }
 
     private fun login() {
+        val email=username.text.toString().trim()
+        val password=password.text.toString().trim()
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                        val i=Intent(this,UserProfile::class.java)
+                    startActivity(i)
+                    Log.d(TAG, "signInWithEmail:success")
 
-        val email=username.text.toString()
-        val pass=password.text.toString()
 
-        auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(this){
-            if (it.isSuccessful){
-                val i =Intent(this,UserProfile::class.java)
-                startActivity(i)
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Log.w(TAG, "signInWithEmail:failure", task.exception)
+                    Toast.makeText(baseContext, "Authentication failed.",
+                        Toast.LENGTH_SHORT).show()
 
-                Toast.makeText(this,"Logged In",Toast.LENGTH_SHORT).show()
-
+                }
             }
-            else
-            {
-                Toast.makeText(this,"Failed!!",Toast.LENGTH_SHORT).show()
 
-
-            }
-        }
     }
+
 
     override fun onStart() {
         super.onStart()
-        if(auth.currentUser!=null){
+        if(Firebase.auth.currentUser!=null){
+
             val i =Intent(this,UserProfile::class.java)
             startActivity(i)
         }

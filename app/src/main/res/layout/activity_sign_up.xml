@@ -58,7 +58,8 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:id="@+id/fullName"
-
+               android:hint="Name"
+               android:textColorHint="@color/black"
                android:textColor="@color/black" />
        </com.google.android.material.textfield.TextInputLayout>
        <com.google.android.material.textfield.TextInputLayout
@@ -74,6 +75,8 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:id="@+id/signupUname"
+               android:hint="Username"
+               android:textColorHint="@color/black"
 
                android:textColor="@color/black" />
        </com.google.android.material.textfield.TextInputLayout>
@@ -93,6 +96,8 @@
                android:id="@+id/signUpEmail"
                android:layout_height="wrap_content"
                android:inputType="textEmailAddress"
+               android:hint="Email"
+               android:textColorHint="@color/black"
 
 
                android:textColor="@color/black" />
@@ -110,7 +115,9 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:inputType="phone"
+               android:hint="Phone Number"
                android:id="@+id/signUpPhone"
+               android:textColorHint="@color/black"
 
                android:textColor="@color/black" />
        </com.google.android.material.textfield.TextInputLayout>
@@ -122,6 +129,7 @@
            android:layout_height="wrap_content"
            android:hint="Password"
            app:boxStrokeColor="#090808"
+           app:passwordToggleTint="@color/black"
            app:passwordToggleEnabled="true"
            app:hintTextColor="@color/black">
 
@@ -130,8 +138,10 @@
                android:layout_height="wrap_content"
                android:textColor="@color/black"
                android:id="@+id/signUpPassword"
+               android:hint="Password"
+               android:textColorHint="@color/black"
 
-               app:passwordToggleEnabled="true" />
+               />
        </com.google.android.material.textfield.TextInputLayout>
        <Button
            android:layout_marginTop="10dp"
